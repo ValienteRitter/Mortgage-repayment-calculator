@@ -7,7 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="app-container">
+        <h1>Mortgage Calculator</h1>
+        <form>
+            <button type="reset">Clear All</button>
+            <label for="amount-input">Mortgage Amount</label>
+            <input type="number" id="amount-input" min="1">
+            <label for="term-input">Mortgage Term</label>
+            <input type="number" id="term-input" min="1">
+            <label for="interest-input">Interest Rate</label>
+            <input type="number" id="interest-input" min="0">
+            <fieldset>
+                <legend>Mortgage Type</legend>
+                <input type="radio" id="repayment" name="mortgage-type" value="repayment"><label for="repayment">Repayment</label>
+                <input type="radio" id="interest-only" name="mortgage-type" value="Interest Only"><label for="interest-only">Interest Only</label>
+            </fieldset>
+            <button type="submit">Calculate Repayments</button>
+        </form>
+        <div class="results-container">
+            <img src="assets/images/illustration-empty.svg" alt="empty">
+            <h1>Results shown here</h1>
+            <p>Complete the form and click "Calculate Repayments" to see what your monthly Repayments wouuld be.</p>
+        </div>
+    </div>
 
 
     <script src="script.js"></script>
