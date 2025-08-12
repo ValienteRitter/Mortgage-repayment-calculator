@@ -52,6 +52,26 @@ input[type='number'] {
 
 }
 
+.calc-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 0.3rem;
+    background-color: var(--primary-1);
+    width: 90%;
+    height: 3rem;
+    border: none;
+    font-weight: 700;
+    border-radius: 30px;
+}
+
+#calculator {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
 .results-container {
     background-color: var(--Slate-900);
     color: white;
