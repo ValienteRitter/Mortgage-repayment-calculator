@@ -30,18 +30,26 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
-    align-items: baseline;
     gap: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+
 }
 
 form {
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
     gap: 1rem;
-    /* height: 50%; */
+}
+
+input[type='number'] {
+    width: 90%;
+    margin: -0.5rem;
+    height: 3rem;
+    border-radius: 10px;
+    border: solid 1px black
+
 }
 
 .results-container {
@@ -49,5 +57,4 @@ form {
     color: white;
     text-align: center;
     padding: 3rem;
-    /* height: 50%; */
 }
