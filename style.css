@@ -68,16 +68,50 @@ form {
 }
 
 input[type="number"] {
-  width: 90%;
-  margin: -0.5rem;
+  width: 100%;
+  margin-left: 0.5rem;
   height: 3rem;
   border-radius: 10px;
   border: solid 1px black;
 }
 
-/* @media(min-width: 1080px) {
+.prefix {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* pointer-events: none; */
+}
 
-} */
+.suffix {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.input-wrapper {
+  position: relative;
+  width: 90%;
+}
+
+.input-wrapper input {
+  padding-left: 30px;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]{
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+
 
 .calc-btn {
   display: flex;
