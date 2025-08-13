@@ -64,6 +64,7 @@ form {
 @media (min-width: 1080px) {
   form {
     padding-left: 1rem;
+    padding-bottom: 1rem;
   }
 }
 
