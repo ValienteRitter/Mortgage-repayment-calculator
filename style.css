@@ -26,13 +26,31 @@ html, body {
     font-size: 16px;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+}
+
 .app-container {
     height: 100%;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-
+    background: white
 }
+@media(min-width: 1080px) {
+    .app-container {
+        flex-direction: row;
+        width: fit-content;
+        height: fit-content;
+        border-radius: 30px;
+        /* padding-bottom: 1rem; */
+    }
+}
+
 
 form {
     width: 100%;
@@ -43,14 +61,23 @@ form {
     gap: 1rem;
 }
 
+@media(min-width: 1080px) {
+    form {
+        padding-left: 1rem;
+    }
+}
+
 input[type='number'] {
     width: 90%;
     margin: -0.5rem;
     height: 3rem;
     border-radius: 10px;
     border: solid 1px black
-
 }
+
+/* @media(min-width: 1080px) {
+
+} */
 
 .calc-btn {
     display: flex;
@@ -85,10 +112,16 @@ input[type='number'] {
     margin-top: 0.5rem;
 }
 
-
 .results-container {
     background-color: var(--Slate-900);
     color: white;
     text-align: center;
     padding: 3rem;
+}
+
+@media(min-width: 1080px) {
+    .results-container {
+        border-radius: 0 30px  30px 100px;
+        padding: 8rem;
+    }
 }
