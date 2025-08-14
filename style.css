@@ -13,6 +13,7 @@
   --Slate-500: hsl(200, 26%, 54%);
   --Slate-700: hsl(200, 24%, 40%);
   --Slate-900: hsl(202, 55%, 16%);
+  --Slate-999: hsl(200, 60%, 9%);
 }
 
 * {
@@ -159,6 +160,37 @@ input[type=number]{
   text-align: center;
   padding: 3rem;
 }
+
+.repayments {
+	background-color: hsl(200, 60%, 9%);
+	height: 17rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+  padding: 1rem;
+  border-radius: 15px;
+  border-top: solid greenyellow 5px;
+}
+.monthly > span{
+  color: yellowgreen;
+  font-size: xx-large;
+  font-weight: 900;
+}
+
+.total > span {
+  font-size: x-large;
+  font-weight: 900;
+}
+
+.empty-image {
+  display: none;
+}
+
+.repayments > hr {
+  width: 100%;
+}
+
 
 @media (min-width: 1080px) {
   .results-container {
