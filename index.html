@@ -14,17 +14,17 @@
             <label for="amount-input">Mortgage Amount</label>
             <div class="input-wrapper">
                 <div class="prefix">$</div>
-                <input type="number" id="amount-input" min="1" step="any">
+                <input type="number" id="amount-input" min="1" step="any" required>
             </div>
             <label for="term-input">Mortgage Term</label>
             <div class="input-wrapper">
                 <div class="suffix">years</div>
-                <input type="number" id="term-input" min="1" step="any">
+                <input type="number" id="term-input" min="1" step="any" required>
             </div>
             <label for="interest-input">Interest Rate</label>
             <div class="input-wrapper">
                 <div class="suffix">%</div>
-                <input type="number" id="interest-input" min="0" step="any">
+                <input type="number" id="interest-input" min="0" step="any" required>
             </div>
             <fieldset class="mortgage-type-field">
                 <legend>Mortgage Type</legend>
@@ -37,7 +37,7 @@
                     <label for="interest-only">Interest Only</label>
                 </div>
             </fieldset>
-            <button type="button" class="calc-btn">
+            <button type="submit" class="calc-btn">
                 <span id="calculator">&#128425</span>
                 <span> Calculate Repayments</span>
             </button>
