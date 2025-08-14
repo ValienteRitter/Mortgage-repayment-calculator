@@ -1,3 +1,4 @@
+const form = document.querySelector('form');
 const amountInput = document.querySelector("#amount-input");
 const termInput = document.querySelector("#term-input");
 const interestInput = document.querySelector("#interest-input");
@@ -85,7 +86,9 @@ function displayResult({monthly, total}) {
       </div>`
 }}
 
-calculateButton.addEventListener('mousedown', () => {
-  highlight()
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
   displayResult(calculateMortgage(getValues()))
 })
+
+calculateButton.addEventListener('mousedown', highlight)
