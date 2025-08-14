@@ -14,17 +14,17 @@
             <label for="amount-input">Mortgage Amount</label>
             <div class="input-wrapper">
                 <div class="prefix">$</div>
-                <input type="number" id="amount-input" min="1">
+                <input type="number" id="amount-input" min="1" step="any">
             </div>
             <label for="term-input">Mortgage Term</label>
             <div class="input-wrapper">
                 <div class="suffix">years</div>
-                <input type="number" id="term-input" min="1">
+                <input type="number" id="term-input" min="1" step="any">
             </div>
             <label for="interest-input">Interest Rate</label>
             <div class="input-wrapper">
                 <div class="suffix">%</div>
-                <input type="number" id="interest-input" min="0">
+                <input type="number" id="interest-input" min="0" step="any">
             </div>
             <fieldset class="mortgage-type-field">
                 <legend>Mortgage Type</legend>
@@ -37,26 +37,15 @@
                     <label for="interest-only">Interest Only</label>
                 </div>
             </fieldset>
-            <button type="submit" class="calc-btn">
+            <button type="button" class="calc-btn">
                 <span id="calculator">&#128425</span>
                 <span> Calculate Repayments</span>
             </button>
         </form>
         <section class="results-container">
-            <img src="assets/images/illustration-empty.svg" alt="empty" class="empty-image">
+            <img src="assets/images/illustration-empty.svg" alt="empty">
             <h1>Results shown here</h1>
             <p>Complete the form and click "Calculate Repayments" to see what your monthly Repayments wouuld be.</p>
-            <div class="repayments">
-                <div class="monthly">
-                    <p>Your monthly repayments</p>
-                    <span class="montly">$1,797.74</span>
-                </div>
-                <hr>
-                <div class="total">
-                    <p>Total you'll repay over the term</p>
-                    <span class="total">$539,322.94</span>
-                </div>
-            </div>
         </section>
     </div>
 

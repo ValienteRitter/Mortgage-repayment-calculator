@@ -15,6 +15,7 @@ document.addEventListener("input", () => {
   console.log(getMortgageType());
   console.log(getValues());
   console.log(calculateMortgage(getValues()));
+  console.log(isValid());
 });
 
 function getValues() {
@@ -43,10 +44,48 @@ function calculateMortgage({amount, term, interest}) {
   }
 
   return {
-    monthly: monthlyRepayment,
-    total: totalRepayment
+    monthly: monthlyRepayment.toFixed(2),
+    total: totalRepayment.toFixed(2)
   }
 
 }
 
+function isValid() {
+  return Array.from(document.querySelectorAll('input')).every((input) => input.checkValidity())
+}
 
+function highlight() {
+  Array.from(document.querySelectorAll('input')).forEach(input => {
+    if (input.checkValidity()) {
+      input.style.borderColor = 'black'      
+    }
+    else {
+      input.style.borderColor = 'red'
+    }
+  })
+}
+
+console.log(document.querySelectorAll('input'));
+
+function displayResult({monthly, total}) {
+  if(isValid()) {
+    resultsContainer.innerHTML = `
+      <h1>Your Results</h1>
+      <p>Your results shown are shown below based on the information you provided. To adjust the results, edit the form and click 'calculate repayments' again</p>
+      <div class="repayments">
+          <div class="monthly">
+              <p>Your monthly repayments</p>
+              <span class="montly">$${monthly}</span>
+          </div>
+          <hr>
+          <div class="total">
+              <p>Total you'll repay over the term</p>
+              <span class="total">$${total}</span>
+          </div>
+      </div>`
+}}
+
+calculateButton.addEventListener('mousedown', () => {
+  highlight()
+  displayResult(calculateMortgage(getValues()))
+})
