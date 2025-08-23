@@ -79,27 +79,37 @@ input[type="number"] {
 }
 
 .prefix {
-  position: absolute;
-  left: 15px;
-  top: 50%;
-  transform: translateY(-50%);
-  /* pointer-events: none; */
+  background-color: #f2f8fc;
+  padding: 14px;
+  font-size: 16px;
+  color: #333;
+  border-right: 1px solid #ccc;
 }
 
 .suffix {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
+  background-color: #f2f8fc;
+  padding: 14px;
+  font-size: 16px;
+  color: #333;
+  border-right: 1px solid #ccc;
 }
 
 .input-wrapper {
-  position: relative;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  overflow: hidden;
   width: 90%;
+
 }
 
 .input-wrapper input {
-  padding-left: 30px;
+  border: none;
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
 }
 
 
