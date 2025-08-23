@@ -58,10 +58,16 @@ function isValid() {
 function highlight() {
   Array.from(document.querySelectorAll('input')).forEach(input => {
     if (input.checkValidity()) {
-      input.style.borderColor = 'black'      
+      input.style.borderColor = 'black'
+      if(input.type === 'number') {
+        input.parentNode.firstElementChild.style.backgroundColor = '#f2f8fc'
+      }
     }
     else {
       input.style.borderColor = 'red'
+      if(input.type === 'number') {
+        input.parentNode.firstElementChild.style.backgroundColor = 'hsl(4, 69%, 50%)'
+      }
     }
   })
 }
@@ -90,5 +96,6 @@ form.addEventListener('submit', (e) => {
   e.preventDefault()
   displayResult(calculateMortgage(getValues()))
 })
+
 
 calculateButton.addEventListener('mousedown', highlight)
